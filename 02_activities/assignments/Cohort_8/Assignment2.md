@@ -54,7 +54,8 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+CUSTOMER_ADDRESS_TYPE1 keeps one current row per customer. Updates overwrite prior values. It can keep the table simple, always current, but there is no history that we can search.
+CUSTOMER_ADDRESS_TYPE2 stores multiple rows per customer with the start and end date, effective boolean. It gives the full history, but will need more complex queries and database storage.
 ```
 
 ***
